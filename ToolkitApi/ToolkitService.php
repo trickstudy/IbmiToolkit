@@ -1929,14 +1929,7 @@ class ToolkitService
      */
     public function generate_name()
     { /*move to i5 side*/
-        $localtime = localtime();
-        $rndName = sprintf("ZS%d%d%d%d",
-                     $localtime[0],/*s*/
-                     $localtime[1],/*min*/
-                     $localtime[2],/*our*/
-                     $localtime[3] /*day*/
-                      );
-        return $rndName;
+        return uniqid('', true);
     }
     
     /**
